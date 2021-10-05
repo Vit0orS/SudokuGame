@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<head>
+    <title>SudokuGameVitor</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Vitor da Silveira">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="todo"/>
+    <script src="scripts.js"></script>
+    <script src="sudokuAlgos.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="load()">
+    <h1 id="mainTitle">SuDoKu</h1>
+    <table id="mainGame">
+        <tr>
+            <td ondrop="drop(0)" ondragstart="dragOut(0)" ondragover="allowDrop(event, 0)" draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(1)" ondragstart="dragOut(1)" ondragover="allowDrop(event, 1)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(2)" ondragstart="dragOut(2)" ondragover="allowDrop(event, 2)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(3)" ondragstart="dragOut(3)" ondragover="allowDrop(event, 3)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(4)" ondragstart="dragOut(4)" ondragover="allowDrop(event, 4)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(5)" ondragstart="dragOut(5)" ondragover="allowDrop(event, 5)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(6)" ondragstart="dragOut(6)" ondragover="allowDrop(event, 6)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(7)" ondragstart="dragOut(7)" ondragover="allowDrop(event, 7)" draggable="true" class="borderCell"></td>
+            <td ondrop="drop(8)" ondragstart="dragOut(8)" ondragover="allowDrop(event, 8)" draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>          
+            <td ondrop="drop(9)"  ondragstart="dragOut(9)"  ondragover="allowDrop(event, 9)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(10)" ondragstart="dragOut(10)"  ondragover="allowDrop(event, 10)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(11)" ondragstart="dragOut(11)"  ondragover="allowDrop(event, 11)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(12)" ondragstart="dragOut(12)"  ondragover="allowDrop(event, 12)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(13)" ondragstart="dragOut(13)"  ondragover="allowDrop(event, 13)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(14)" ondragstart="dragOut(14)"  ondragover="allowDrop(event, 14)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(15)" ondragstart="dragOut(15)"  ondragover="allowDrop(event, 15)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(16)" ondragstart="dragOut(16)"  ondragover="allowDrop(event, 16)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(17)" ondragstart="dragOut(17)"  ondragover="allowDrop(event, 17)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>          
+            <td ondrop="drop(18)" ondragstart="dragOut(18)"  ondragover="allowDrop(event, 18)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(19)" ondragstart="dragOut(19)"  ondragover="allowDrop(event, 19)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(20)" ondragstart="dragOut(20)"  ondragover="allowDrop(event, 20)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(21)" ondragstart="dragOut(21)"  ondragover="allowDrop(event, 21)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(22)" ondragstart="dragOut(22)"  ondragover="allowDrop(event, 22)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(23)" ondragstart="dragOut(23)"  ondragover="allowDrop(event, 23)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(24)" ondragstart="dragOut(24)"  ondragover="allowDrop(event, 24)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(25)" ondragstart="dragOut(25)"  ondragover="allowDrop(event, 25)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(26)" ondragstart="dragOut(26)"  ondragover="allowDrop(event, 26)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>           
+            <td ondrop="drop(27)" ondragstart="dragOut(27)"  ondragover="allowDrop(event, 27)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(28)" ondragstart="dragOut(28)"  ondragover="allowDrop(event, 28)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(29)" ondragstart="dragOut(29)"  ondragover="allowDrop(event, 29)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(30)" ondragstart="dragOut(30)"  ondragover="allowDrop(event, 30)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(31)" ondragstart="dragOut(31)"  ondragover="allowDrop(event, 31)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(32)" ondragstart="dragOut(32)"  ondragover="allowDrop(event, 32)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(33)" ondragstart="dragOut(33)"  ondragover="allowDrop(event, 33)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(34)" ondragstart="dragOut(34)"  ondragover="allowDrop(event, 34)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(35)" ondragstart="dragOut(35)"  ondragover="allowDrop(event, 35)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>           
+            <td ondrop="drop(36)" ondragstart="dragOut(36)"  ondragover="allowDrop(event, 36)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(37)" ondragstart="dragOut(37)"  ondragover="allowDrop(event, 37)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(38)" ondragstart="dragOut(38)"  ondragover="allowDrop(event, 38)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(39)" ondragstart="dragOut(39)"  ondragover="allowDrop(event, 39)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(40)" ondragstart="dragOut(40)"  ondragover="allowDrop(event, 40)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(41)" ondragstart="dragOut(41)"  ondragover="allowDrop(event, 41)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(42)" ondragstart="dragOut(42)"  ondragover="allowDrop(event, 42)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(43)" ondragstart="dragOut(43)"  ondragover="allowDrop(event, 43)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(44)" ondragstart="dragOut(44)"  ondragover="allowDrop(event, 44)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>           
+            <td ondrop="drop(45)" ondragstart="dragOut(45)"  ondragover="allowDrop(event, 45)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(46)" ondragstart="dragOut(46)"  ondragover="allowDrop(event, 46)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(47)" ondragstart="dragOut(47)"  ondragover="allowDrop(event, 47)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(48)" ondragstart="dragOut(48)"  ondragover="allowDrop(event, 48)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(49)" ondragstart="dragOut(49)"  ondragover="allowDrop(event, 49)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(50)" ondragstart="dragOut(50)"  ondragover="allowDrop(event, 50)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(51)" ondragstart="dragOut(51)"  ondragover="allowDrop(event, 51)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(52)" ondragstart="dragOut(52)"  ondragover="allowDrop(event, 52)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(53)" ondragstart="dragOut(53)"  ondragover="allowDrop(event, 53)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>          
+            <td ondrop="drop(54)" ondragstart="dragOut(54)"  ondragover="allowDrop(event, 54)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(55)" ondragstart="dragOut(55)"  ondragover="allowDrop(event, 55)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(56)" ondragstart="dragOut(56)"  ondragover="allowDrop(event, 56)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(57)" ondragstart="dragOut(57)"  ondragover="allowDrop(event, 57)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(58)" ondragstart="dragOut(58)"  ondragover="allowDrop(event, 58)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(59)" ondragstart="dragOut(59)"  ondragover="allowDrop(event, 59)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(60)" ondragstart="dragOut(60)"  ondragover="allowDrop(event, 60)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(61)" ondragstart="dragOut(61)"  ondragover="allowDrop(event, 61)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(62)" ondragstart="dragOut(62)"  ondragover="allowDrop(event, 62)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>           
+            <td ondrop="drop(63)" ondragstart="dragOut(63)"  ondragover="allowDrop(event, 63)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(64)" ondragstart="dragOut(64)"  ondragover="allowDrop(event, 64)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(65)" ondragstart="dragOut(65)"  ondragover="allowDrop(event, 65)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(66)" ondragstart="dragOut(66)"  ondragover="allowDrop(event, 66)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(67)" ondragstart="dragOut(67)"  ondragover="allowDrop(event, 67)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(68)" ondragstart="dragOut(68)"  ondragover="allowDrop(event, 68)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(69)" ondragstart="dragOut(69)"  ondragover="allowDrop(event, 69)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(70)" ondragstart="dragOut(70)"  ondragover="allowDrop(event, 70)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(71)" ondragstart="dragOut(71)"  ondragover="allowDrop(event, 71)"  draggable="true" class="borderCell"></td>
+        </tr>
+        <tr>           
+            <td ondrop="drop(72)" ondragstart="dragOut(72)"  ondragover="allowDrop(event, 72)"  draggable="true" class="borderCell">&nbsp;</td>
+            <td ondrop="drop(73)" ondragstart="dragOut(73)"  ondragover="allowDrop(event, 73)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(74)" ondragstart="dragOut(74)"  ondragover="allowDrop(event, 74)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(75)" ondragstart="dragOut(75)"  ondragover="allowDrop(event, 75)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(76)" ondragstart="dragOut(76)"  ondragover="allowDrop(event, 76)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(77)" ondragstart="dragOut(77)"  ondragover="allowDrop(event, 77)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(78)" ondragstart="dragOut(78)"  ondragover="allowDrop(event, 78)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(79)" ondragstart="dragOut(79)"  ondragover="allowDrop(event, 79)"  draggable="true" class="borderCell"></td>
+            <td ondrop="drop(80)" ondragstart="dragOut(80)"  ondragover="allowDrop(event, 80)"  draggable="true" class="borderCell"></td>
+        </tr>
+
+    </table>
+
+    <div id="buttons">
+        <button onclick="inst()">Instructions</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+
+    <div id="dragAndDrops">
+        <p ondragstart="drag(1)" draggable="true">1</p>
+        <p ondragstart="drag(2)" draggable="true">2</p>
+        <p ondragstart="drag(3)" draggable="true">3</p>
+        <p ondragstart="drag(4)" draggable="true">4</p>
+        <p ondragstart="drag(5)" draggable="true">5</p>
+        <p ondragstart="drag(6)" draggable="true">6</p>
+        <p ondragstart="drag(7)" draggable="true">7</p>
+        <p ondragstart="drag(8)" draggable="true">8</p>
+        <p ondragstart="drag(9)" draggable="true">9</p>
+    </div>
+
+    <div id="trashCan">
+        <img src="img/1064108-200.png" draggable="false" ondrop="dropTrash()" ondragover="allowDelete(event)"/>
+    </div>
+
+    <footer> <p style="font-size: 1.3em; text-align: center; top: 30; display: relative; color: black;">&copy <span id="year"></span> Vitor da Silveira</p></footer>
+</body>

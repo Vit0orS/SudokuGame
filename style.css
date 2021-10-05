@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-wrap: wrap;
+}
+
+#mainTitle{
+    text-shadow: 1px 3px 5px black;
+    color: white;
+    font-size: 3em;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    border: 3px black solid;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    flex-wrap: wrap;
+    background-color: rgb(185, 111, 0);
+}
+
+#mainGame{
+    display: flex;
+    justify-content: center;
+    border-collapse: collapse;
+    float: left;
+    padding-left: 10%;
+    padding-bottom: 1%;
+}
+
+td{
+    font-size: 3em;
+    color: black;
+    border: 4px solid black;
+    width: 60px;
+    text-align: center;
+}
+
+#dragAndDrops{
+    font-size: 3em;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction:initial;
+}
+
+#dragAndDrops p{
+    padding:0 20px;
+    float: right;
+}
+#trashCan{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    height: 120px;
+    width: 120px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1%;
+}
+
+@media(max-width:1200px){
+    td {
+       font-size: 2em;
+       width: 40px;
+    }
+
+    #dragAndDrops{
+        font-size: 2em;
+    }
+  }
+
+  @media(max-width:800px){
+    td {
+       font-size: 1.2em;
+       width: 30px;
+    }
+
+    #dragAndDrops{
+        font-size: 1.2em;
+    }
+  }
